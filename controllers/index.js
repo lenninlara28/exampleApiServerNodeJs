@@ -4,7 +4,7 @@ const controllersGet = (req, res) => {
   /* Espacio para validaciónes */
   const users = servicesUser.getServices();
   if (!users) return res.status(404).json({ message: "No hay usuarios" });
-  res.status(200).json({ message: "Usuarios Listados" }, users);
+  res.status(200).json({ users, message: "Usuarios Listados" });
 };
 
 const controllersCreate = (req, res) => {
