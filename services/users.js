@@ -1,6 +1,6 @@
 const models = require("../DB/models");
 
-const controllersGet = () => {
+const getServices = () => {
   /* Traer usuarios de la bd */
   const user = models.getAll();
   return user;
@@ -26,7 +26,7 @@ const controllersDelete = (id) => {
 };
 
 module.exports = {
-  controllersGet,
+  getServices,
   controllersCreate,
   controllersUpdate,
   controllersDelete,
